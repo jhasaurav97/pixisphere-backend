@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "52e920d7-5bac-4fdc-a377-ae1c84bac770",
+		"name": "Pixisphere Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36645924"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Saurav Client\",\r\n  \"email\": \"saurav_client@example.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"johnpartner@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Partner",
+			"item": [
+				{
+					"name": "create-profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGM0YmJkZjk1MzY3MzExYWY4Yjg3NCIsInJvbGUiOiJwYXJ0bmVyIiwiaWF0IjoxNzYyNDEzNTM3LCJleHAiOjE3NjMwMTgzMzd9.Aw76jefF7iXUUwLq2PibboJECiUfndpFoL-iOJjxRZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGM0YmJkZjk1MzY3MzExYWY4Yjg3NCIsInJvbGUiOiJwYXJ0bmVyIiwiaWF0IjoxNzYyNDEzNTM3LCJleHAiOjE3NjMwMTgzMzd9.Aw76jefF7iXUUwLq2PibboJECiUfndpFoL-iOJjxRZQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"serviceType\": \"Wedding Photography\",\r\n  \"city\": \"Delhi\",\r\n  \"experience\": \"5 years\",\r\n  \"portfolioUrls\": [\"https://dummyimage.com/600x400\"],\r\n  \"aadharNumber\": \"123456789012\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/partner/create-profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"partner",
+								"create-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGM0YmJkZjk1MzY3MzExYWY4Yjg3NCIsInJvbGUiOiJwYXJ0bmVyIiwiaWF0IjoxNzYyNDEzNTM3LCJleHAiOjE3NjMwMTgzMzd9.Aw76jefF7iXUUwLq2PibboJECiUfndpFoL-iOJjxRZQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/partner/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"partner",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"item": [
+				{
+					"name": "Add Portfolio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGM1MDY3Zjk1MzY3MzExYWY4Yjg4OCIsInJvbGUiOiJwYXJ0bmVyIiwiaWF0IjoxNzYyNDE0OTQwLCJleHAiOjE3NjMwMTk3NDB9.vZS6t6DGgvPwLVaWumI9Hyg0M3cWb60OGmTuJvu7TBw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"images\": [\r\n    { \"url\": \"https://example.com/p1.jpg\", \"description\": \"Outdoor wedding\" },\r\n    { \"url\": \"https://example.com/p2.jpg\", \"description\": \"Haldi ceremony\" }\r\n  ],\r\n  \"price\": 25000,\r\n  \"tags\": [\"wedding\", \"outdoor\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/portfolio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"portfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inquiry",
+			"item": [
+				{
+					"name": "Create Inquiry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MGM0YmJkZjk1MzY3MzExYWY4Yjg3NCIsInJvbGUiOiJwYXJ0bmVyIiwiaWF0IjoxNzYyNDEzNTM3LCJleHAiOjE3NjMwMTgzMzd9.Aw76jefF7iXUUwLq2PibboJECiUfndpFoL-iOJjxRZQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category\": \"wedding\",\r\n  \"city\": \"Delhi\",\r\n  \"budget\": 50000,\r\n  \"date\": \"2025-12-12\",\r\n  \"referenceImg\": \"https://sample.com/ref.jpg\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/inquiry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"inquiry"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get Dashboard Stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/admin/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"admin",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "stats",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "verify-patner",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
