@@ -109,13 +109,14 @@ Use token in Authorization header (Bearer <token>) for protected routes.
 
 🌍 Live Demo
 
-Render Deployment: https://your-render-url.onrender.com
+Render Deployment: https://pixisphere-backend-xqco.onrender.com/
 
 GitHub Repository: https://github.com/your-username/pixisphere-backend
 
 🧑‍💻 Author
 
 Saurav — Full Stack Developer
-📧 saurav@example.com
+📧 jhasaurav593@gmail.com
 
 💼 LinkedIn Profile
+https://www.linkedin.com/in/jha-saurav97/
